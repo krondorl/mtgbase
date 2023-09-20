@@ -1,0 +1,13 @@
+.display-legality {
+  display: inline-block;
+}
+
+.display-legality__true::before {
+  display: inherit;
+  content: "✅";
+}
+
+.display-legality__false::before {
+  display: inherit;
+  content: "❌";
+}

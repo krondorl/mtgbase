@@ -1,0 +1,20 @@
+@use '../../../mixins' as mxn;
+
+.main {
+  padding: 1rem;
+}
+
+.h2-welcome {
+  font-size: 3rem;
+}
+
+.img-basic-lands {
+  border: 0.06rem solid var(--clr-text);
+  max-height: 400px;
+  max-width: 100%;
+}
+
+.cta-link-btn {
+  @include mxn.button;
+  font-size: 1.5rem;
+}

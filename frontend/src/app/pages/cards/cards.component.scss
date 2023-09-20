@@ -1,0 +1,17 @@
+.cardlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(245px, 3fr));
+  grid-auto-rows: minmax(341px, auto);
+  grid-gap: 0.25rem;
+  margin-inline: auto;
+  max-width: 62.5rem;
+}
+
+.cardlist__link {
+  border: 0;
+}
+
+.cardlist__img {
+  max-height: 341px;
+  max-width: 245px;
+}

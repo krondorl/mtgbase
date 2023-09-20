@@ -1,0 +1,27 @@
+@use '../../../mixins' as mxn;
+
+.header {
+  padding: 1rem;
+}
+
+.header__menu {
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__li {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.header__a {
+  font-size: 1.25rem;
+}
+
+.header__logo {
+  @include mxn.button;
+  font-size: 2rem;
+}

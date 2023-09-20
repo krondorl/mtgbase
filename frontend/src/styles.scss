@@ -1,0 +1,39 @@
+:root {
+  --clr-white: #fff;
+  --clr-background: #2b253a;
+  --clr-text: #fdfdfd;
+  --clr-footer-bg: #19181f;
+  --clr-footer-text: #ccc;
+  --clr-cta-bg: rgba(255, 255, 255, 0.09);
+  --clr-cta-border: rgba(255, 255, 255, 0.6);
+  --ff-base: sans-serif;
+}
+
+body {
+  background: var(--clr-background);
+  color: var(--clr-text);
+  font-family: var(--ff-base);
+  margin: 0;
+  padding: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  border-bottom: 0.125rem dashed var(--clr-text);
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 0.125rem solid var(--clr-text);
+}
+
+.container {
+  padding: 1rem;
+}
+
+.center {
+  text-align: center;
+}

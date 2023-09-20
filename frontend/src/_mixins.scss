@@ -1,0 +1,6 @@
+@mixin button {
+  color: var(--clr-white);
+  background-color: var(--clr-cta-bg);
+  border: 0.06rem solid var(--clr-cta-border);
+  padding: 0.5rem;
+}

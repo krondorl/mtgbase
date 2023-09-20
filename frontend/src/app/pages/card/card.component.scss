@@ -1,0 +1,98 @@
+.card-details,
+.card-rules {
+  display: flex;
+  margin-inline: auto;
+  max-width: 62.5rem;
+}
+
+.card-rules {
+  display: block;
+}
+
+.card-image__img {
+  max-height: 468px;
+  max-width: 336px;
+}
+
+.mana-img {
+  display: inline-block;
+}
+
+.card-text__name {
+  margin-inline-end: 1rem;
+}
+
+.card-text__mana-cost {
+  display: flex;
+  min-width: 2ch;
+  white-space: nowrap;
+}
+
+.mana-colorless {
+  background: var(--clr-footer-text);
+  border-radius: 50%;
+  color: var(--clr-background);
+  display: inline-block;
+  padding: 0.125rem;
+  min-width: 2ch;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card-text__title {
+  align-items: center;
+  display: flex;
+}
+
+.card-text__title,
+.card-text__type-line,
+.card-text__description,
+.card-text__stats,
+.card-text__artist,
+.card-legality,
+.card-text__flavour,
+.card-text__set-info {
+  margin: 0;
+  padding: 0.5rem;
+  border-block-end: 0.06rem solid var(--clr-white);
+  border-inline-end: 0.06rem solid var(--clr-white);
+}
+
+.card-text__flavour {
+  border-block-start: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.card-text__description:has(+ .card-text__flavour) {
+  border-block-end: 0;
+}
+
+.card-text__title {
+  border-block-start: 0.25rem solid var(--clr-white);
+}
+
+.card-rules__list,
+.card-legality__left,
+.card-legality__right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-rules__date {
+  font-style: italic;
+}
+
+.card-legality__left,
+.card-legality__right {
+  flex: 1;
+}
+
+.card-legality {
+  display: flex;
+}
+
+.card-text__set-name {
+  font-size: 1.25rem;
+}

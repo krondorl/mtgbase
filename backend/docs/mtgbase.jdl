@@ -1,0 +1,34 @@
+entity Card {
+	id Long,
+	name String,
+    imageName String,
+    manaCost String,
+    typeLine String,
+    description String,
+    flavour String,
+    stats String,
+    artist String,
+    setName String,
+    setCode String,
+    serialNumber Short,
+    rarity String
+}
+
+entity Legality {
+    id Long,
+    cardId Long,
+	formatName String,
+    isLegal Boolean
+}
+
+entity Rules {
+	id Long,
+    cardId Long,
+    rule String,
+    date String
+}
+
+relationship OneToMany {
+	Card to Legality{cardId},
+    Card to Rules{cardId},
+}

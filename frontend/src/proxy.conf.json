@@ -1,0 +1,18 @@
+{
+  "/api/cards": {
+    "target": "http://localhost:8080/",
+    "secure": false
+  },
+  "/api/cards/*": {
+    "target": "http://localhost:8080/",
+    "secure": false
+  },
+  "/api/card/*": {
+    "target": "http://localhost:8080/",
+    "secure": false
+  },
+  "/api/artists": {
+    "target": "http://localhost:8080/",
+    "secure": false
+  }
+}

@@ -1,0 +1,49 @@
+<main class="container" *ngIf="(card | async) as card">
+  <div class="card-details">
+    <div class="card-image">
+      <img class="card-image__img" src="/assets/single-cards/{{card.imageName}}" alt="{{ card.name }}">
+    </div>
+    <div class="card-text">
+      <div class="card-text__title">
+        <h1 class="card-text__name">{{ card.name }}</h1>
+        <div class="card-text__mana-cost" [innerHTML]="convertToManaSymbols(card.manaCost)"></div>
+      </div>
+      <div class="card-text__set-info">
+        <p><span class="card-text__set-name">{{ card.setName }} ({{ card.setCode }})</span></p>
+        <p>#{{ card.serialNumber }} {{ card.rarity }}</p>
+      </div>
+      <p class="card-text__type-line">{{ card.typeLine }}</p>
+      <p class="card-text__description">{{ card.description }}</p>
+      <p *ngIf="card.flavour" class="card-text__flavour">{{ card.flavour }}</p>
+      <p *ngIf="card.stats" class="card-text__stats">{{ card.stats }}</p>
+      <p class="card-text__artist">Illustrated by {{ card.artist }}</p>
+      <div class="card-legality" *ngIf="card.legality?.length">
+        <ul class="card-legality__left">
+          <li><display-legality [legality]="getLegality(card.legality, 'Standard')"></display-legality> Standard</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Pioneer')"></display-legality> Pioneer</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Modern')"></display-legality> Modern</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Legacy')"></display-legality> Legacy</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Vintage')"></display-legality> Vintage</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Commander')"></display-legality> Commander</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Oathbreaker')"></display-legality> Oathbreaker</li>
+        </ul>
+        <ul class="card-legality__right">
+          <li><display-legality [legality]="getLegality(card.legality, 'Alchemy')"></display-legality> Alchemy</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Explorer')"></display-legality> Explorer</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Brawl')"></display-legality> Brawl</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Historic')"></display-legality> Historic</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Pauper')"></display-legality> Pauper</li>
+          <li><display-legality [legality]="getLegality(card.legality, 'Penny')"></display-legality> Penny</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card-rules" *ngIf="card.rules?.length">
+    <h2>Notes and rules information for {{ card.name }}</h2>
+    <ul class="card-rules__list">
+      <li *ngFor="let rule of card.rules">
+        <p>{{rule.rule}}<br><time class="card-rules__date">{{rule.date}}</time></p>
+      </li>
+    </ul>
+  </div>
+</main>

@@ -1,0 +1,9 @@
+<main class="container">
+  <div class="cardlist">
+    <div class="cardlist__card" *ngFor="let card of (cards | async)">
+      <a class="cardlist__link" [routerLink]="['/card/' + card.id]">
+        <img class="cardlist__img" src="/assets/single-cards/{{card.imageName}}"/>
+      </a>
+    </div>
+  </div>
+</main>

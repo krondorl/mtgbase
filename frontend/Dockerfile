@@ -1,15 +1,13 @@
-# Based on this tutorial, visited on 22/09/2023.
-# https://serengetitech.com/tech/how-to-dockerize-your-angular-14-application/
-#
-# Multi stage build
-FROM node:18-alpine AS build
+FROM node:18-alpine
 WORKDIR /app
-COPY . .
+COPY package*.json ./
+RUN npm install -g @angular/cli@15.2.4
 RUN npm install
-RUN npm run build
-FROM nginx:alpine
-COPY --from=build /app/dist/mtgbase-frontend/ /usr/share/nginx/html
-EXPOSE 4200
+COPY . .
+
+# This is needed for proper running of Angular
+# https://stackoverflow.com/questions/46778868/ng-serve-not-working-in-docker-container
+CMD ["ng","serve","--host", "0.0.0.0"]
 #
 # Build and run
 # docker buildx build -t mtgbase-frontend:v01 .

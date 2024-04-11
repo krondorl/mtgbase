@@ -5,9 +5,8 @@ RUN npm install -g @angular/cli@15.2.4
 RUN npm install
 COPY . .
 
-# This is needed for proper running of Angular
-# https://stackoverflow.com/questions/46778868/ng-serve-not-working-in-docker-container
-CMD ["ng","serve","--host", "0.0.0.0"]
+# Run docker script using proper proxy config
+CMD ["npm","run","start-docker"]
 #
 # Build and run
 # docker buildx build -t mtgbase-frontend:v01 .

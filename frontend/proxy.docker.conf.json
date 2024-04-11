@@ -1,0 +1,18 @@
+{
+  "/api/cards": {
+    "target": "api",
+    "secure": false
+  },
+  "/api/cards/*": {
+    "target": "api",
+    "secure": false
+  },
+  "/api/card/*": {
+    "target": "api",
+    "secure": false
+  },
+  "/api/artists": {
+    "target": "api",
+    "secure": false
+  }
+}

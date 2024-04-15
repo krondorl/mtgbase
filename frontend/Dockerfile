@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 
 # Run docker script using proper proxy config
-CMD ["npm","run","start-docker"]
+CMD ["npm","run","start"]
 #
 # Build and run
 # docker buildx build -t mtgbase-frontend:v01 .

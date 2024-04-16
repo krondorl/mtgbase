@@ -1,6 +1,6 @@
 # Mtgbase
 
-Full stack Magic the Gathering card game database, made with:
+Full stack [Magic the Gathering card game](https://magic.wizards.com/en) database, made with:
 
 - Angular, TypeScript
 - Spring Boot, Java
@@ -14,6 +14,32 @@ To run the complete projects, [you will need Docker Desktop running.](https://ww
 1. Open a Terminal
 1. Go to the source folder
 1. Execute the command: `docker compose up`
+1. Open browser at http://localhost:3050
+
+**Please note: you need to wait until the build is ready! This might take more than 40 seconds for all the containers.**
+
+(I tested the build on Windows 11 with the following desktop computer: Intel Core i7-10700, 16 GB DDR4 SDRAM.)
+
+```
+client-1  | - Generating browser application bundles (phase: setup)...
+client-1  | ✔ Browser application bundle generation complete.
+client-1  |
+client-1  | Initial Chunk Files   | Names         |  Raw Size
+client-1  | vendor.js             | vendor        |   2.13 MB |
+client-1  | polyfills.js          | polyfills     | 314.84 kB |
+client-1  | styles.css, styles.js | styles        | 210.99 kB |
+client-1  | main.js               | main          |  59.51 kB |
+client-1  | runtime.js            | runtime       |   6.53 kB |
+client-1  |
+client-1  | | Initial Total |   2.71 MB
+client-1  |
+client-1  | Build at: 2024-04-16T18:56:01.755Z - Hash: d65c309ccd4dcf9a - Time: 32302ms
+client-1  |
+client-1  | ** Angular Live Development Server is listening on 0.0.0.0:3000, open your browser on http://localhost:3000/ **
+client-1  |
+client-1  |
+client-1  | ✔ Compiled successfully.
+```
 
 If you need container rebuilding, use `docker compose up --build`
 

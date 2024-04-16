@@ -11,12 +11,20 @@ services:
     ports:
       - 3050:80
   api:
-    build: ./backend
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
     volumes:
       - ./backend:/app
+    ports:
+      - 8080:8080
   client:
-    build: ./frontend
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
     depends_on:
       - api
     volumes:
       - ./frontend:/app
+    ports:
+      - 3000:3000

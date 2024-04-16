@@ -29,3 +29,13 @@ Please see how to use the frontend and backend in the subfolder docs.
 The cover page looks like this.
 
 ![Cover page](screenshot.png)
+
+## License
+
+Card pictures are under unofficial Fan Content policy.
+
+```
+Portions of Mtgbase are unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. Mtgbase is not produced by or endorsed by Wizards of the Coast.
+```
+
+Everything else [is licensed as such.](LICENSE)

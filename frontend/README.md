@@ -12,11 +12,11 @@ System requirements
 ### Docker
 
 1. Run: `docker buildx build -t mtgbase-frontend:v01 .`
-1. Execute: `docker run -p 4200:4200 mtgbase-frontend:v01`
-1. Open in browser http://localhost:4200/
+1. Execute: `docker run -p 3000:3000 mtgbase-frontend:v01`
+1. Open in browser http://localhost:3000/
 
 ### Npm
 
 1. To install, run: `npm install`
 1. To run the server, use: `npm start`
-1. Open your browser on http://localhost:4200/
+1. Open your browser on http://localhost:3000/

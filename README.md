@@ -14,7 +14,7 @@ To run the complete projects, [you will need Docker Desktop running.](https://ww
 1. Open a Terminal
 1. Go to the source folder
 1. Execute the command: `docker compose up`
-1. Open browser at http://localhost:3050
+1. Open the browser at http://localhost:3050
 
 **Please note: you need to wait until the build is ready! This might take more than 40 seconds for all the containers.**
 
@@ -58,7 +58,7 @@ The cover page looks like this.
 
 ## License
 
-Card pictures are under unofficial Fan Content policy.
+Card pictures are subject to the unofficial Fan Content policy.
 
 ```
 Portions of Mtgbase are unofficial Fan Content permitted
@@ -68,5 +68,10 @@ Magic: The Gathering, including card images and mana symbols,
 is copyright Wizards of the Coast, LLC. Mtgbase is not produced by
 or endorsed by Wizards of the Coast.
 ```
+
+## History
+
+- The angular frontend was updated to 18 on July 2024.
+- I started the project in September 2023.
 
 Everything else [is licensed as such.](LICENSE)

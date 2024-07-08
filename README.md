@@ -69,9 +69,9 @@ is copyright Wizards of the Coast, LLC. Mtgbase is not produced by
 or endorsed by Wizards of the Coast.
 ```
 
+Everything else [is licensed as such.](LICENSE)
+
 ## History
 
 - The angular frontend was updated to 18 on July 2024.
 - I started the project in September 2023.
-
-Everything else [is licensed as such.](LICENSE)

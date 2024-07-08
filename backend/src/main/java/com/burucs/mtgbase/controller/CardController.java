@@ -1,3 +1,11 @@
+/*!
+ * Mtgbase
+ *
+ * Copyright (c) 2023 Adam Burucs
+ *
+ * MIT Licensed
+ */
+
 package com.burucs.mtgbase.controller;
 
 import com.burucs.mtgbase.dto.CardDto;

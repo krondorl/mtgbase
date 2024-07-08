@@ -1,9 +1,19 @@
+<img src="docs/magic-card-back.jpg" height="192" />
+
 # Mtgbase
 
 Full stack **unofficial** [Magic the Gathering card game](https://magic.wizards.com/en) database, made with:
 
-- Angular, TypeScript
-- Spring Boot, Java
+- TypeScript
+- Angular
+- Java
+- Spring Boot
+
+## Screenshot
+
+The cover page looks like this.
+
+![Cover page](docs/screenshot.png)
 
 ## Install and run
 
@@ -49,12 +59,6 @@ Please see how to use the frontend and backend in the subfolder docs.
 
 - [Frontend docs](frontend/README.md)
 - [Backend docs](backend/README.md)
-
-## Screenshot
-
-The cover page looks like this.
-
-![Cover page](screenshot.png)
 
 ## License
 

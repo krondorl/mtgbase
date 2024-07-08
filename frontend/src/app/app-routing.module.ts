@@ -1,3 +1,11 @@
+/*!
+ * Mtgbase
+ *
+ * Copyright (c) 2023 Adam Burucs
+ *
+ * MIT Licensed
+ */
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArtistsComponent } from './pages/artists/artists.component';
@@ -16,6 +24,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,14 +1,21 @@
+/*!
+ * Mtgbase
+ *
+ * Copyright (c) 2023 Adam Burucs
+ *
+ * MIT Licensed
+ */
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Card } from '../models/card.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CardService {
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getCards(): Observable<Card[]> {
     return this.httpClient.get<Card[]>(`/api/cards`).pipe();
@@ -19,6 +26,8 @@ export class CardService {
   }
 
   getCardsByArtistName(artistName: string): Observable<Card[]> {
-    return this.httpClient.get<Card[]>(`/api/cards/?artistName=${artistName}`).pipe();
+    return this.httpClient
+      .get<Card[]>(`/api/cards/?artistName=${artistName}`)
+      .pipe();
   }
 }

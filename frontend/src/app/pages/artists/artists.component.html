@@ -1,8 +1,19 @@
+<!--
+  * Mtgbase
+  *
+  * Copyright (c) 2023 Adam Burucs
+  *
+  * MIT Licensed
+-->
 <main class="container">
   <div class="artistlist">
     <ul>
-      <li class="artistlist__li" *ngFor="let artist of (artists | async)">
-        <a class="artistlist__link" [routerLink]="['/cards/artist/' + encode(artist.artistName)]">{{ artist.artistName }}</a>
+      <li class="artistlist__li" *ngFor="let artist of artists | async">
+        <a
+          class="artistlist__link"
+          [routerLink]="['/cards/artist/' + encode(artist.artistName)]"
+          >{{ artist.artistName }}</a
+        >
       </li>
     </ul>
   </div>

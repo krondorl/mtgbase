@@ -1,5 +1,12 @@
-import { TestBed } from '@angular/core/testing';
+/*!
+ * Mtgbase
+ *
+ * Copyright (c) 2023 Adam Burucs
+ *
+ * MIT Licensed
+ */
 
+import { TestBed } from '@angular/core/testing';
 import { CardService } from './card.service';
 
 describe('CardService', () => {

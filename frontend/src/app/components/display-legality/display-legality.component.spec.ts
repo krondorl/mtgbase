@@ -1,5 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*!
+ * Mtgbase
+ *
+ * Copyright (c) 2023 Adam Burucs
+ *
+ * MIT Licensed
+ */
 
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DisplayLegalityComponent } from './display-legality.component';
 
 describe('DisplayLegalityComponent', () => {
@@ -8,9 +15,8 @@ describe('DisplayLegalityComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplayLegalityComponent ]
-    })
-    .compileComponents();
+      declarations: [DisplayLegalityComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DisplayLegalityComponent);
     component = fixture.componentInstance;

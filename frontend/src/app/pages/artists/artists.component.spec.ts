@@ -1,5 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*!
+ * Mtgbase
+ *
+ * Copyright (c) 2023 Adam Burucs
+ *
+ * MIT Licensed
+ */
 
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ArtistsComponent } from './artists.component';
 
 describe('ArtistsComponent', () => {
@@ -8,9 +15,8 @@ describe('ArtistsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ArtistsComponent ]
-    })
-    .compileComponents();
+      declarations: [ArtistsComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ArtistsComponent);
     component = fixture.componentInstance;

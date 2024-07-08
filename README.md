@@ -1,6 +1,6 @@
 # Mtgbase
 
-Full stack [Magic the Gathering card game](https://magic.wizards.com/en) database, made with:
+Full stack **unofficial** [Magic the Gathering card game](https://magic.wizards.com/en) database, made with:
 
 - Angular, TypeScript
 - Spring Boot, Java

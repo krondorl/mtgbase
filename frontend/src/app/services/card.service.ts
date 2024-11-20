@@ -8,8 +8,9 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { Card } from '../models/card.model';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +23,12 @@ export class CardService {
   }
 
   getCard(id: number): Observable<Card> {
-    return this.httpClient.get<Card>(`/api/card?id=${id}`).pipe();
+    return this.httpClient.get<Card>(`/api/card?id=${id}`).pipe(
+      catchError((error) => {
+        console.error('HTTP Error:', error);
+        return throwError(() => error);
+      })
+    );
   }
 
   getCardsByArtistName(artistName: string): Observable<Card[]> {

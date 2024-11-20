@@ -6,10 +6,11 @@ import { Legality } from 'src/app/models/legality.model';
 import { CardService } from 'src/app/services/card.service';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-card',
+    templateUrl: './card.component.html',
+    styleUrls: ['./card.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class CardComponent {
   id!: number;

@@ -4,10 +4,10 @@
 
 Full stack **unofficial** [Magic the Gathering card game](https://magic.wizards.com/en) database, made with:
 
-- TypeScript
-- Angular
-- Java
-- Spring Boot
+- [TypeScript 5.6.3](https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/)
+- [Angular 19](https://blog.angular.dev/meet-angular-v19-7b29dfd05b84)
+- [Java 17](https://www.oracle.com/java/technologies/javase/17-relnote-issues.html)
+- [Spring Boot 3.1.2](https://spring.io/blog/2023/07/20/spring-boot-3-1-2-available-now)
 
 ## Screenshot
 

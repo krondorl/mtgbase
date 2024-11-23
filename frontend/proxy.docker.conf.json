@@ -3,11 +3,7 @@
     "target": "api",
     "secure": false
   },
-  "/api/cards/*": {
-    "target": "api",
-    "secure": false
-  },
-  "/api/card/*": {
+  "/api/card": {
     "target": "api",
     "secure": false
   },

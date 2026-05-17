@@ -1,19 +1,21 @@
 <!--
-  * Mtgbase
-  *
-  * Copyright (c) 2023 Adam Burucs
-  *
-  * MIT Licensed
+* Mtgbase
+*
+* Copyright (c) 2023 Adam Burucs
+*
+* MIT Licensed
 -->
 <main class="container">
   <div class="cardlist">
-    <div class="cardlist__card" *ngFor="let card of cards | async">
-      <a class="cardlist__link" [routerLink]="['/card/' + card.id]">
-        <img
-          class="cardlist__img"
-          src="/assets/single-cards/{{ card.imageName }}"
-        />
-      </a>
+    @for (card of cards | async; track card) {
+      <div class="cardlist__card">
+        <a class="cardlist__link" [routerLink]="['/card/' + card.id]">
+          <img
+            class="cardlist__img"
+            src="/assets/single-cards/{{ card.imageName }}"
+            />
+          </a>
+        </div>
+      }
     </div>
-  </div>
-</main>
+  </main>

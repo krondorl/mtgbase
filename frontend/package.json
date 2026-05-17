@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config src/proxy.conf.json --disable-host-check --host 0.0.0.0 --port 3000",
+    "dev": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json --host 0.0.0.0 --port 3000",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -14,10 +15,10 @@
     "@angular/common": "^21.2.13",
     "@angular/compiler": "^21.2.13",
     "@angular/core": "^21.2.13",
-    "@angular/forms": "^20.3.21",
+    "@angular/forms": "^21.2.13",
     "@angular/platform-browser": "^21.2.13",
-    "@angular/platform-browser-dynamic": "^20.3.21",
-    "@angular/router": "^20.3.21",
+    "@angular/platform-browser-dynamic": "^21.2.13",
+    "@angular/router": "^21.2.13",
     "mtgbase-frontend": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

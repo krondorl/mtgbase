@@ -1,7 +1,7 @@
-FROM node:22.12.0-bookworm-slim
+FROM node:24.15.0-bookworm-slim
 WORKDIR /app
 COPY package*.json ./
-RUN npm install -g @angular/cli@21.2.11 && npm ci
+RUN npm install -g @angular/cli@22.0.1 && npm ci
 COPY . .
 
 # Run docker script using proper proxy config

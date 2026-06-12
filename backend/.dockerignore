@@ -1,1 +1,14 @@
 target
+.git
+.gitignore
+.idea
+.vscode
+*.iml
+*.log
+
+# local config / IDE / run configs
+.run
+
+# OS files
+.DS_Store
+Thumbs.db

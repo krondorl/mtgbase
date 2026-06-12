@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   nginx:
     depends_on:
@@ -26,5 +25,6 @@ services:
       - api
     volumes:
       - ./frontend:/app
+      - /app/node_modules
     ports:
       - 3000:3000

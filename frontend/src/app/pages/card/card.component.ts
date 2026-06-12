@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { Card } from 'src/app/models/card.model';
@@ -10,6 +10,7 @@ import { CardService } from 'src/app/services/card.service';
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss'],
     encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CardComponent {

@@ -6,12 +6,13 @@
  * MIT Licensed
  */
 
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'display-legality',
     templateUrl: './display-legality.component.html',
     styleUrls: ['./display-legality.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DisplayLegalityComponent {

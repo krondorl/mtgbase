@@ -11,6 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {
   provideHttpClient,
   withInterceptorsFromDi,
+  withXhr
 } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -35,6 +36,6 @@ import { ArtistsComponent } from './pages/artists/artists.component';
   ],
   bootstrap: [AppComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [provideHttpClient(withInterceptorsFromDi())],
+  providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())],
 })
 export class AppModule {}

@@ -6,7 +6,7 @@
  * MIT Licensed
  */
 
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Artist } from 'src/app/models/artist.model';
 import { ArtistService } from 'src/app/services/artist.service';
@@ -15,6 +15,7 @@ import { ArtistService } from 'src/app/services/artist.service';
     selector: 'app-artists',
     templateUrl: './artists.component.html',
     styleUrls: ['./artists.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ArtistsComponent {

@@ -9,11 +9,14 @@ import { Observable, Subscription } from 'rxjs';
 import { Card } from '../../models/card.model';
 import { Legality } from '../../models/legality.model';
 import { CardService } from '../../services/card.service';
+import { DisplayLegalityComponent } from '../../components/display-legality/display-legality.component';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
+  imports: [DisplayLegalityComponent, AsyncPipe],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.Eager,
 })

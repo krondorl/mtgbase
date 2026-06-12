@@ -10,10 +10,13 @@ import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Artist } from '../../models/artist.model';
 import { ArtistService } from '../../services/artist.service';
+import { RouterLink } from '@angular/router';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-artists',
   templateUrl: './artists.component.html',
+  imports: [RouterLink, AsyncPipe],
   styleUrls: ['./artists.component.scss'],
   changeDetection: ChangeDetectionStrategy.Eager,
 })

@@ -7,15 +7,17 @@
  */
 
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { Card } from '../../models/card.model';
 import { CardService } from '../../services/card.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss'],
+  imports: [RouterLink, AsyncPipe],
   changeDetection: ChangeDetectionStrategy.Eager,
 })
 export class CardsComponent implements OnInit {

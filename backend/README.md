@@ -19,8 +19,7 @@ Dependencies:
 
 Execute the following commands inside the project folder.
 
-1. `mvn clean package`
-1. `mvn spring-boot:run`
+`mvn spring-boot:run`
 
 ## Tables
 

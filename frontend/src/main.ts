@@ -13,12 +13,13 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
-import { AppRoutingModule } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(BrowserModule, AppRoutingModule),
+    importProvidersFrom(BrowserModule),
+    ...appConfig.providers,
     provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
 }).catch((err) => console.error(err));

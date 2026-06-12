@@ -12,7 +12,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     selector: 'app-welcome',
     templateUrl: './welcome.component.html',
     styleUrls: ['./welcome.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    changeDetection: ChangeDetectionStrategy.Eager
 })
 export class WelcomeComponent {}

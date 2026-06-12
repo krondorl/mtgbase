@@ -16,7 +16,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CardService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private readonly httpClient: HttpClient) {}
 
   getCards(): Observable<Card[]> {
     return this.httpClient.get<Card[]>(`/api/cards`).pipe();
@@ -27,7 +27,7 @@ export class CardService {
       catchError((error) => {
         console.error('HTTP Error:', error);
         return throwError(() => error);
-      })
+      }),
     );
   }
 

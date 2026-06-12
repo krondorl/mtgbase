@@ -1,36 +1,39 @@
-import { Component, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  ViewEncapsulation,
+  ChangeDetectionStrategy,
+  OnInit,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { Card } from 'src/app/models/card.model';
-import { Legality } from 'src/app/models/legality.model';
-import { CardService } from 'src/app/services/card.service';
+import { Card } from '../../models/card.model';
+import { Legality } from '../../models/legality.model';
+import { CardService } from '../../services/card.service';
 
 @Component({
-    selector: 'app-card',
-    templateUrl: './card.component.html',
-    styleUrls: ['./card.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Eager,
 })
-export class CardComponent {
+export class CardComponent implements OnInit {
   id!: number;
   card!: Observable<Card>;
   parametersObservable!: Subscription;
 
   constructor(
-    private route: ActivatedRoute,
-    private cardService: CardService) {}
+    private readonly route: ActivatedRoute,
+    private readonly cardService: CardService,
+  ) {}
 
   getLegality(legalities: Legality[] | undefined, formatName: string): boolean {
     if (legalities && legalities?.length > 0 && formatName) {
       const isLegal = legalities
         .filter(
-          (legalityItem: Legality) => legalityItem.formatName === formatName
+          (legalityItem: Legality) => legalityItem.formatName === formatName,
         )
-        .map(
-          (legalityItem: Legality) => legalityItem.isLegal
-        );
+        .map((legalityItem: Legality) => legalityItem.isLegal);
       if (isLegal?.length == 1) {
         return isLegal[0];
       }
@@ -40,7 +43,7 @@ export class CardComponent {
   }
 
   convertSymbol(symbol: string): string {
-    let outputStr = "";
+    let outputStr = '';
     switch (symbol) {
       case 'W':
         outputStr += `<img class="mana-img" src="/assets/mana-symbols/mana-white.svg">`;
@@ -65,20 +68,20 @@ export class CardComponent {
 
   convertToManaSymbols(rawManaCost: string): string {
     const parts = /(\d{0,2})([WUBRG]{0,5})/.exec(rawManaCost);
-    let symbolString = "";
+    let symbolString = '';
 
     if (!parts) {
-      return "";
+      return '';
     }
 
-    if (parts[1] && parseInt(parts[1]) >= 0) {
+    if (parts[1] && Number.parseInt(parts[1]) >= 0) {
       symbolString = `<span class="mana-colorless">${parts[1]}</span>`;
     }
 
     if (parts[2]) {
       for (const char of parts[2]) {
         symbolString += this.convertSymbol(char);
-      };
+      }
     }
 
     return symbolString;
@@ -96,7 +99,7 @@ export class CardComponent {
           },
           complete: () => {
             console.log('complete');
-          }
+          },
         });
       },
       error: (err: any) => {
@@ -104,7 +107,7 @@ export class CardComponent {
       },
       complete: () => {
         console.log('complete');
-      }
+      },
     });
   }
 }

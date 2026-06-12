@@ -15,8 +15,8 @@ describe('CardsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CardsComponent],
-    }).compileComponents();
+    imports: [CardsComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(CardsComponent);
     component = fixture.componentInstance;

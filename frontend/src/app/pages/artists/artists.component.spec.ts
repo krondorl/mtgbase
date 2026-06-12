@@ -15,8 +15,8 @@ describe('ArtistsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ArtistsComponent],
-    }).compileComponents();
+    imports: [ArtistsComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(ArtistsComponent);
     component = fixture.componentInstance;

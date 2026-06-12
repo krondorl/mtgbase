@@ -15,7 +15,7 @@ import { Artist } from '../models/artist.model';
   providedIn: 'root',
 })
 export class ArtistService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private readonly httpClient: HttpClient) {}
 
   getArtists(): Observable<Artist[]> {
     return this.httpClient.get<Artist[]>(`/api/artists`).pipe();

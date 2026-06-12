@@ -12,8 +12,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    changeDetection: ChangeDetectionStrategy.Eager
 })
 export class AppComponent {
   title = 'mtgbase-frontend';

@@ -6,22 +6,21 @@
  * MIT Licensed
  */
 
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Artist } from 'src/app/models/artist.model';
-import { ArtistService } from 'src/app/services/artist.service';
+import { Artist } from '../../models/artist.model';
+import { ArtistService } from '../../services/artist.service';
 
 @Component({
-    selector: 'app-artists',
-    templateUrl: './artists.component.html',
-    styleUrls: ['./artists.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: 'app-artists',
+  templateUrl: './artists.component.html',
+  styleUrls: ['./artists.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
 })
-export class ArtistsComponent {
+export class ArtistsComponent implements OnInit {
   artists!: Observable<Artist[]>;
 
-  constructor(private artistService: ArtistService) {}
+  constructor(private readonly artistService: ArtistService) {}
 
   ngOnInit(): void {
     this.artists = this.artistService.getArtists();

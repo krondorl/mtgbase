@@ -9,15 +9,14 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { Card } from 'src/app/models/card.model';
-import { CardService } from 'src/app/services/card.service';
+import { Card } from '../../models/card.model';
+import { CardService } from '../../services/card.service';
 
 @Component({
-    selector: 'app-cards',
-    templateUrl: './cards.component.html',
-    styleUrls: ['./cards.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+  selector: 'app-cards',
+  templateUrl: './cards.component.html',
+  styleUrls: ['./cards.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
 })
 export class CardsComponent implements OnInit {
   artistName!: string;
@@ -25,8 +24,8 @@ export class CardsComponent implements OnInit {
   parametersObservable!: Subscription;
 
   constructor(
-    private route: ActivatedRoute,
-    private cardService: CardService
+    private readonly route: ActivatedRoute,
+    private readonly cardService: CardService,
   ) {}
 
   ngOnInit(): void {

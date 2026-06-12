@@ -12,8 +12,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
     selector: 'display-legality',
     templateUrl: './display-legality.component.html',
     styleUrls: ['./display-legality.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager,
-    standalone: false
+    changeDetection: ChangeDetectionStrategy.Eager
 })
 export class DisplayLegalityComponent {
   @Input() legality: boolean = false;

@@ -15,8 +15,8 @@ describe('DisplayLegalityComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DisplayLegalityComponent],
-    }).compileComponents();
+    imports: [DisplayLegalityComponent],
+}).compileComponents();
 
     fixture = TestBed.createComponent(DisplayLegalityComponent);
     component = fixture.componentInstance;

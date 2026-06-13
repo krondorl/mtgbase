@@ -6,7 +6,7 @@ Full stack **unofficial** [Magic the Gathering card game](https://magic.wizards.
 
 - [TypeScript 6.0.3](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/)
 - [Angular 22](https://blog.angular.dev/announcing-angular-v22-c52bb83a4664)
-- [Java 17](https://www.oracle.com/java/technologies/javase/17-relnote-issues.html)
+- [Java 25](https://www.oracle.com/news/announcement/oracle-releases-java-25-2025-09-16/)
 - [Spring Boot 3.5.15](https://spring.io/blog/2026/06/10/spring-boot-3-5-15-available-now)
 
 ## Screenshot

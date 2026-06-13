@@ -77,5 +77,6 @@ Everything else [is licensed as such.](LICENSE)
 
 ## History
 
-- The angular frontend was updated to 18 on July 2024.
+- I upgraded the frontend from Angular 19 to 22 between November 2024 and June 2026.
+- The Angular frontend was updated to 18 on July 2024.
 - I started the project in September 2023.

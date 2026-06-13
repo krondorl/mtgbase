@@ -6,10 +6,10 @@
 * MIT Licensed
 -->
 <div class="display-legality">
-  @if (legality) {
+  @if (legality()) {
     <div class="display-legality__true"></div>
   }
-  @if (!legality) {
+  @if (!legality()) {
     <div class="display-legality__false"></div>
   }
 </div>

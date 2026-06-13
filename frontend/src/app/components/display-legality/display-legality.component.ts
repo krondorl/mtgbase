@@ -6,14 +6,14 @@
  * MIT Licensed
  */
 
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 
 @Component({
-    selector: 'display-legality',
-    templateUrl: './display-legality.component.html',
-    styleUrls: ['./display-legality.component.scss'],
-    changeDetection: ChangeDetectionStrategy.Eager
+  selector: 'display-legality',
+  templateUrl: './display-legality.component.html',
+  styleUrls: ['./display-legality.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
 })
 export class DisplayLegalityComponent {
-  @Input() legality: boolean = false;
+  public legality = input(false);
 }
